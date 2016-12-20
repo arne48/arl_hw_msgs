@@ -7,6 +7,8 @@ Descriptions of Messages
 * desired_pressure = this values is set to set a muscle to a specific pressure
 * current_pressure = this value is read-only and contains the current measured pressure of the muscle  
 * tension = this value is read-only and contains the current tension on the muscle
+* activation = this value is set to a normalized value between -1 and 1 over the full muscle actuation range
+
 
 ### MuscleState
 * header = ROS Header
