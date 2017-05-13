@@ -6,21 +6,22 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
 )
 
- add_message_files(
-   FILES
-   Muscle.msg
-   MuscleState.msg
- )
+add_message_files(
+  FILES
+  Muscle.msg
+  MusculatureState.msg
+  MusculatureCommand.msg
+  MuscleCommand.msg
+)
 
- add_service_files(
-   FILES
-   MuscleCommand.srv
- )
+#add_service_files(
+#   FILES
+# )
 
- generate_messages(
-   DEPENDENCIES
-   std_msgs
- )
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
 
 catkin_package(
 #  INCLUDE_DIRS include
