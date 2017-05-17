@@ -3,25 +3,29 @@
 ## Messages
 Descriptions of Messages
 ### Muscle
-* name = this contains the unique name of a muscle
-* desired_pressure = this values is set to set a muscle to a specific pressure
-* current_pressure = this value is read-only and contains the current measured pressure of the muscle 
-* tension = this value is read-only and contains the current tension on the muscle
-* activation = this value is set to a normalized value between -1 and 1 over the full muscle actuation range
-* control_mode = indicates if the muscle is currently controlled by activation or pressure based on it's last command
+* name = contains the unique name of a muscle
+* desired_pressure = the pressure the muscle controller tries to reach
+* current_pressure = current pressure within the muscle
+* tension = the tension on the muscle
+* activation = the current activation value of the muscle
+* control_mode = indicates if the muscle is currently controlled by activation or pressure
 
+### MuscleCommand
+* name = contains the unique name of a muscle
+* pressure = pressure the muscle should maintain
+* activation = activation value for the muscle
+* control_mode = indicates if an activation or pressure command will be send to controller
 
-### MuscleState
+### MusculatureState
 * header = ROS Header
-* muscles\[Muscle\] = this list contains all considerable muscles 
+* muscle_states\[Muscle\] = contains states of all available muscles
+
+### MusculatureCommand
+* header = ROS Header
+* muscle_commands\[MuscleCommand\] = contains the requested muscle commands
 
 ## Services
-Descriptions of Services
-### MuscleCommand
-* Request
-    * muscle_state = desired state of all muscles which should be set by the **MuscleController**
-* Response
-    * success = result of muscle command
+TBA
     
 ## Actions
 TBA
