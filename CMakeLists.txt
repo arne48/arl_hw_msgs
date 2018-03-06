@@ -8,6 +8,8 @@ find_package(catkin REQUIRED COMPONENTS
 
 add_message_files(
   FILES
+  AnalogInput.msg
+  AnalogInputArray.msg
   Muscle.msg
   MusculatureState.msg
   MusculatureCommand.msg
